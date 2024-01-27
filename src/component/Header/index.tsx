@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import logo from "../../images/png/logo.png";
 
 export default function Header() {
   return (
     <>
       <header>
-        <h1>LOGO</h1>
+        <h1>
+          <img src={logo} className="logo" />
+        </h1>
 
         <nav className="links">
           <ul>
@@ -15,7 +18,9 @@ export default function Header() {
             <Link className="nav-link" to={"/menu"}>
               <li>Menu</li>
             </Link>
-            <li>Sobre nós</li>
+            <Link className="nav-link" to={"/sobre"}>
+              <li>Sobre</li>
+            </Link>
           </ul>
         </nav>
       </header>
